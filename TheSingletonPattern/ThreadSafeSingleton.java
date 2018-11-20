@@ -11,7 +11,7 @@ public class ThreadSafeSingleton {
 	private ThreadSafeSingleton() {}
 	
 	// Note: Thread safe singleton uses synchronised keyword
-	public static ThreadSafeSingleton getInstance() {
+	public static synchronized ThreadSafeSingleton getInstance() {
 		if(uniqueInstance == null) {
 			uniqueInstance = new ThreadSafeSingleton();
 		}
