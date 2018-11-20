@@ -9,9 +9,9 @@ public class StatisticsDisplay implements IObserver, IDisplayElement {
 	private float minTemp = 200;
 	private float tempSum= 0.0f;
 	private int numReadings;
-	private WeatherData weatherData;
+	private ISubject weatherData;
 	
-	public StatisticsDisplay(WeatherData weatherData) {
+	public StatisticsDisplay(ISubject weatherData) {
 		this.weatherData = weatherData;
 		weatherData.registerObserver(this);
 	}
